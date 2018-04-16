@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache go git gcc && \
+RUN apk add --no-cache go git build-base && \
     go get github.com/Sean-Der/fail2rest && \
     cd $GOPATH/src/github.com/Sean-Der/fail2rest && \
     rm config.json && \
