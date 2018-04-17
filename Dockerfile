@@ -1,7 +1,7 @@
 FROM golang:alpine
 
 WORKDIR /go/src/app
-RUN apk add --no-cache git && \
+RUN apk add --no-cache git build-base && \
     go get -v github.com/Sean-Der/fail2rest && \
     cd $GOPATH/src/github.com/Sean-Der/fail2rest && \
     rm config.json && \
